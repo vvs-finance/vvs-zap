@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "standard"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "max-len": ["warn", {"code": 150, "ignoreUrls": true}],
+    "quotes": ["error", "double", { "avoidEscape": true, "allowTemplateLiterals": false }],
+    "semi": [2, "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-unused-expressions": 0,
+    "no-unused-vars": 0,
+    "no-undef": 0
+  }
+}

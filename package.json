@@ -1,0 +1,48 @@
+{
+  "name": "@vvs-finance/farm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prettier-config": "prettier '*/**/*.{sol,json}'",
+    "prettier:check": "yarn prettier-config --check",
+    "prettier:fix": "yarn prettier-config --write",
+    "eslint:check": "eslint '*/**/*.{js,ts}' '*.{js,ts}' ",
+    "eslint:fix": "yarn eslint:check --fix",
+    "format:check": "yarn prettier:check && yarn eslint:check",
+    "format": "yarn prettier:fix && yarn eslint:fix",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "script": "npx hardhat run scripts/main.js --network "
+  },
+  "dependencies": {
+    "@vvs-finance/vvs-swap-core": "git+https://github.com/vvs-finance/vvs-swap-core.git#master",
+    "@vvs-finance/vvs-swap-periphery": "git+https://github.com/vvs-finance/vvs-swap-periphery.git#update-dependencies",
+    "@openzeppelin/contracts": "4.4.2",
+    "@openzeppelin/contracts-upgradeable": "4.4.2",
+    "@openzeppelin/test-helpers": "0.5.15",
+    "dotenv": "11.0.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.5",
+    "@nomiclabs/hardhat-truffle5": "2.0.5",
+    "@nomiclabs/hardhat-waffle": "2.0.3",
+    "@nomiclabs/hardhat-web3": "2.0.0",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "eslint": "8.6.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.0.0",
+    "ethereum-waffle": "3.4.0",
+    "ethers": "5.5.3",
+    "hardhat": "2.9.3",
+    "chai": "4.3.4",
+    "prettier": "2.5.1",
+    "prettier-plugin-solidity": "1.0.0-beta.19",
+    "solidity-coverage": "0.7.17",
+    "hardhat-gas-reporter": "1.0.8",
+    "web3": "1.7.1"
+  }
+}
